@@ -119,7 +119,5 @@ def multiplicacion(*numeros):
 print multiplicacion(2, 1, 3, 4)
 ```
 
-\`\`\`python
 
-\`\`\`
 
