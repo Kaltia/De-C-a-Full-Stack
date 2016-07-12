@@ -1,4 +1,3 @@
-
 # Python
 
 Es un lenguaje de programación interpretado o de script,su sintaxis es clara, sencilla y simple, con un tipado dinámico, fuertemente tipado, multiplataforma y orientado a objetos.
