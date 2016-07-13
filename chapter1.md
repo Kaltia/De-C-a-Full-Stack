@@ -14,7 +14,7 @@ Type "help", "copyright", "credits" or "license" for more information.
 >>> 
 ```
 
-Podemos salir de la consola escribiendo exit\(\) o pulsando Ctrl + D.
+Podemos salir de la consola escribiendo `exit()` o pulsando Ctrl + D.
 
 Si no se muestra algo parecido no te preocupes, instalar Python es muy sencillo. Puedes [descargar](https://www.python.org/downloads/)  la versión correspondiente a tu sistema operativo.
 
