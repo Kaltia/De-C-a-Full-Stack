@@ -18,22 +18,54 @@ Podemos salir de la consola escribiendo `exit()` o pulsando Ctrl + D.
 
 Si no se muestra algo parecido no te preocupes, instalar Python es muy sencillo. Puedes [descargar](https://www.python.org/downloads/)  la versión correspondiente a tu sistema operativo.
 
-### Funciones
 
-Ejemplo de una función que retorna un solo valor.
-Este es un ejemplo de como se retorna un valor en C, con una función llamada sumar, donde los parámentros declarados como enteros "x" y "y" retornan la suma de ellos.
+## Tipos básicos 
 
-```c
-int sumar(int x, int y){
-  return x + y;
-}
+### Números
 
-main(){
-  printf("%d", sumar(3, 2));
-}
+- Enteros son todos aquellos numeros positivos o negativos que no tienen decimales
+```python
+3
+4
+5
 ```
 
-El mismo ejemplo anterior ahora representado en el lenguaje de programación de Python, donde se declara la función con la palabra def, el nombre de la función y retorna el valor resultante de la operación, si no hay un valor de retorno se regresará `None`.
+- Coma flotante son todos aquellos que tienen decimales, en python se expresan mediante el tipo `float`
+```python
+34.9
+12.6 
+234.344
+```
+
+- Los numeros complejos son aquellos que tienen una parte real y una imaginaria y se expresan de la siguiente manera:
+```python
+7 + 3j
+5 + j
+```
+
+Se puede comprobar el tipo de las variables con la función `type(nombre_variable)`.
+```python
+$ complejo = 7 + 3j
+$ type(complejo)
+<class 'complex'>
+```
+
+### Cadenas de texto
+
+```python
+"Hola mundo!"
+```
+
+### Valores booleanos
+
+```python
+True 
+False
+```
+
+## Funciones
+
+En el lenguaje de programación de Python, se declara una función con la palabra `def`, el nombre de la función y retorna el valor resultante de la operación usando `return`, si no hay un valor de retorno se regresará `None`.
 
 En Python:
 
@@ -66,8 +98,10 @@ En Python cuando se pasa un argumento a una función es por valor, sin embargo e
 
 ### Listas 
 
-Es un tipo de colección ordenada, y seria igual a lo que en otros lenguajes,como C, conocemos como arrays.
+Es un tipo de estructura de datos, y es similar a lo que en otros lenguajes, conocemos como arrays, la diferencia radica en que las listas pueden aumentar o disminuir sus dimensiones al momento de ejecutar el script o programa.
 En las listas podemos ordenar cualquier tipo de dato: números, cadenas, booleanos, incluso listas, entre otros.
+
+
 ### Tuplas
 
 En las tuplas, los valores creados al inicio ya no se pueden modificar después y su tamaño es fijo. Una ventaja de las tuplas es que son más ligeras que las listas.
@@ -78,13 +112,6 @@ Los diccionarios son colecciones que relacionan una clave y un valor.
 
  - [ ] Definir que es un diccionario, el texto me dice que es una lista de elementos solo se necesita especificar un poco más sino puede confundirse con una lista.
 
-En el lenguaje de programación C, se utiliza un arreglo o estructuras para declarar una lista de elementos en una variable, sin embargo en python a esa estructura se le llama diccionario.
-
-En C:
-
-```c
-
-```
 
 - [ ] Podemos agregar una pequeña descripción de por que en python es distinto que en C, es decir por que no tengo que usar indices. - [ ] El punto anterior nos puede llevar a que es un iterador, recomiendo explicar brevemente con un ejemplo [con gatitos quedaria bien](http://nvie.com/img/iterable-vs-iterator.png)
 
@@ -117,6 +144,3 @@ def multiplicacion(*numeros):
 
 print multiplicacion(2, 1, 3, 4)
 ```
-
-
-
