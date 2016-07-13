@@ -19,4 +19,7 @@ La instalación de git en sistemas Linux es muy sencilla solo debemos ir a la te
 
 
 
+### Instalación de git en Windows
 
+
+Se realiza mediante el [instalador de git para Windows](https://git-scm.com/download/win). Solo debemos seguir las instrucciones de instalación que van apareciendo en los dialogos.
