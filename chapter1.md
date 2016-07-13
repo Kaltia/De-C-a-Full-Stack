@@ -33,7 +33,7 @@ main(){
 }
 ```
 
-El mismo ejemplo anterior ahora representado en el lenguaje de programación de Python, donde se declara la función con la palabra def, el nombre de la función y retorna el valor resultante de la operación, si no hay un valor de retorno se regresará none.
+El mismo ejemplo anterior ahora representado en el lenguaje de programación de Python, donde se declara la función con la palabra def, el nombre de la función y retorna el valor resultante de la operación, si no hay un valor de retorno se regresará `None`.
 
 En Python:
 
