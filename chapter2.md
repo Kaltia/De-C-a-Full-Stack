@@ -13,9 +13,7 @@ Git es un sistema de control de versiones, esto quiere decir que es un sistema q
 La instalación de git en sistemas Linux es muy sencilla solo debemos ir a la terminal y teclear el siguiente comando en sistemas basados en Debian:
 
             ```sudo apt-get install git```
-            
-![Instalar git en sistemas basados en Debian](Captura de pantalla de 2016-07-07 22-58-02.png)
-            
+
 
 
 
@@ -23,3 +21,9 @@ La instalación de git en sistemas Linux es muy sencilla solo debemos ir a la te
 
 
 Se realiza mediante el [instalador de git para Windows](https://git-scm.com/download/win). Solo debemos seguir las instrucciones de instalación que van apareciendo en los dialogos.
+
+
+## Configuración de git
+
+Para relizar la configuración de git debemos registrar algunos datos personales que a continuación mencionamos.
+
