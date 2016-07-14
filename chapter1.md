@@ -36,7 +36,7 @@ $ python --version
 
 Para instalar en windows iremos al sitio oficial de python en la sección de [descargas](https://www.python.org/downloads/), por defecto se mostrarán los archivos correspondientes a Windows, seleccionar la versión correspondiente.
 
-Una vez descargado python, lo ejecutaremos y seguiremos los pasos que indica el asistente, es importante tener en cuenta las rutas en donde se ha instalado python ya que posteriormente las agregaremos a las variables de entorno de windows.
+Una vez descargado python, lo ejecutaremos y seguiremos los pasos que indica el asistente, es importante tener en cuenta las rutas en donde se está instalando python ya que posteriormente las agregaremos a las variables de entorno de windows.
 
 Al terminar con la instalación, debemos configurar las variables de entorno con los siguientes pasos:
 
