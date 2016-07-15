@@ -97,3 +97,59 @@ Al final o al inicio podemos tener varias bases de datos en una instancia de Mon
 
 ## CRUD a bordo
 
+
+Hasta este moment ya conocemos la estructura de como se almacena la información pero que hay de crear nuevos elementos, buscarlos, actualizarlo y eliminarlos.
+Esto es lo que significa CRUD (Creat, Read, Update, Delete) pero en mongo cambiaron un poco los nombre pero agrandes razgos funcionan de la misma forma.
+
+```
+Create -> Insert
+Read -> Find
+Update -> Update
+Delete -> Remove
+```
+
+Para crear un nuevo elemento usamos la forma `db.collection.acción`, para este caso es insert:
+
+```
+db.alumnos.insert({nombre: "Jesus", apellido: "Ramirez" })
+```
+
+Para buscar un elemento es de la misma forma solo que el documento indica que elementos seran buscado y cual sera su predicado:
+
+```
+db.alumnos.find({'nombre': { $in: ["Nanaka", "Jesus"] } })
+```
+
+En este caso queremos encontrar aquellos elementos cuyo campo nombre tenga el valor de "Jesus" o "Nanaka". Para ello es que se usa el operador [$in](https://docs.mongodb.com/manual/reference/operator/query/in/), además de este existen muchos mas operadores en la documentación pero de momento no los necesitamos.
+
+Actualizar un elemento es similar solo que esta vez el primer elemento es usada para obtener el documento a actualizar y el segundo indica las reglas y valores para actualizar.
+
+```
+db.alumnos.update(
+  {'nombre': { $in: ["Jesus", "Xavi"] } }, 
+  { $set: { sexo: "masculino" } }
+)
+```
+
+Esto solo actualizara al primer elemento que conincida con la query (el primer documento pasado como argumento), en caso de querer actualizar todos lo campos se debe de agregar un tercer documento con el campo `{multi: true}`.
+
+```
+db.alumnos.update(
+  { 'nombre': { $in: ["Jesus", "Xavi"] } },
+  { $set: { sexo: "masculino" } },
+  { multi: true}
+)
+```
+
+El operador `$set` unicamente actualiza o crea los campo especificado, no sobreescribe el documento, para lograr esto solo remueve el comando `set` del segundo objecto pasado como parametro.
+
+Como ultima operación que forma parte del CRUD, `remove` necesita un parametro que sirva para consultar los elmentos que se vana  eliminar y en caso de querer eliminar todo los documentos que cumplan dicho criterio deberemos pasarle otro documento con el campo `multi` con valor `true`.
+
+```
+db.alumnos.remove(
+ { 'nombre': "Jesus" },
+ { multi: true}
+)
+```
+
+Esto eliminara a todos los documentos que tengan `"Jesus"` en su campo `nombre`.
