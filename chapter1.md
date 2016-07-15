@@ -1,6 +1,6 @@
 # Python
 
-Es un lenguaje de programación interpretado o de script,su sintaxis es clara, sencilla y simple, con un tipado dinámico, fuertemente tipado, multiplataforma y orientado a objetos.
+Es un lenguaje de programación interpretado o de script,su sintaxis es clara, sencilla y simple, con un tipado dinámico, multiplataforma y orientado a objetos.
 
 ## Instalación de Python
 
@@ -82,7 +82,7 @@ Al terminar con la instalación, debemos configurar las variables de entorno con
 
 Se puede comprobar el tipo de las variables con la función `type(nombre_variable)`.
 
-```python
+```
 $ complejo = 7 + 3j
 $ type(complejo)
 <class 'complex'>
@@ -150,6 +150,12 @@ lista_animales = ['gato', 'elefante', 'rinoceronte']
 for animal in lista_animales:
     print ("El animal es:", animal, "la cantidad de letras:", len(animal))
 ```
+
+
+
+### Argumentos variables
+
+Podemos definir un número variable de argumentos, definiendo el nombre del argumento precedido del signo `*`. Al momento de mandar a llamar esta función, se irán agregando los valores que se requieran funcionando como lista. Algunos ejemplos son:
 
 ```python
 def suma(*numeros):
