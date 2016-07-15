@@ -28,12 +28,72 @@ distribuciones linux tendremos que levantar el demonio con el manejador de proce
 systemctl start mongod
 ```
 
+## DBs, Documentos, Collecciones y algo más
+
+Deberiamos empezar con un las bases del algebrea relacional, tocas los diagras y finalizar con un twist de SQL si esto fuea una clase de base de datos comun, pero esto no es una clase ni tampoco hablamos de algo que comunmente se enseñe en las aulas.
+
+Tomando empezemos por definir que en MongoDB necesitamos tres contenedores de datos, los cuales entran en una categoria muy simple:
+
+```
+Base De Datos
+  |-- Collección
+    |-- Documento
+      |-- Campos
+```
+
+Esta es la jerarquia de contenedores de datos, comenzamos por una base de datos, detro de la cual se encuentran colleciones de datos, las cuales estan compuestas por documentos y como ya sabemos la historia estas se encuentran conformados por campos.
+
+Un campo no es más que la asociación de una clave con un valor:
+
+```
+nombre: "Pastel de Queso con Zarzamora"
+```
+
+Ahora los documentos son un conjunto de campos y los cuales se representan como un objecto de javascript o muy similar a los hash en Python:
+
+```
+{
+  nombre: "Pastel de Queso con Zarzamora",
+  costo: 240.50,
+  medida: "grande"
+}
+```
+
+Como te habras dado cuenta los documentos son basicamente objectos de javascript, pero que esto no te confunda pues estas usado una consola de JS para acceder a los datos, De hecho podemos considerar a los documetos como un superconjuto de los objetos de JS por que agrega más tipos de datos soportado como BinaryData, Code, Simbolos, Regex, entre otros. Los datos no se alacenan como json si no utilizan un formato para serializar los datos llamado BSO, el cual no es más que un formato binari para reprentar objetos o documentos, pero adentrarse más en el tema esta fuera del alcance de esta guia.
 
 
-## DBs, Documentos, Collecciones y algo más 
+Continuando con nuestros conceptos base, las colecciones son un conjunto de documentos:
 
+```
+> db.creators.find()
+{ first: "Yukihiro", aka: "Matz", last: "Matsumoto" } 
+{ last: "van rossum", first: "Guido" }
+```
 
+La función `find()` nos ayuda a obtener y hacer consultas a los documentos de la colleción, por defecto nos trae los 20 primeros elementos de la collección llamada `creators`.
 
-## Semejanzas y similitudes con SQL 
+Ya que vimos que solo el agrupación de agrupaciónes el siguiente concepto no es distinto, la base de datos es un conjunto de collecciones:
+
+```
+> db.getCollectionNames()
+[ "creators", "employees", "system.indexes" ]
+```
+
+Ahora te preguntaras que significa db, pues bien no es más que una referencia a la base de datos que esta en uso actualmente y la cual se selecciona con el comando `use`.
+
+```
+> show dbs
+local 0.00006866455078125GB
+locations 0.00006103515625GB
+practica 0.00006866455078125GB
+test 0.0001373291015625GB
+> use test
+switched to db test
+> db
+test
+```
+
+Al final o al inicio podemos tener varias bases de datos en una instancia de MongoDB, piensalo como ogros o cebollas son capas que cubren otras capas.
 
 ## CRUD a bordo
+
