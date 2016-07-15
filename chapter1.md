@@ -40,11 +40,13 @@ Una vez descargado python, lo ejecutaremos y seguiremos los pasos que indica el 
 
 Al terminar con la instalación, debemos configurar las variables de entorno con los siguientes pasos:
 
-1. Ve a Equipo, haz clic en `Propiedades del sistema>Configuración avanzada>Variables de entorno` y seleccionar `Nueva`.
+1. Ve a Equipo, haz clic en `Propiedades del sistema>Configuración avanzada>Variables de entorno`.
 
-2. En el campo `Nombre de la variable` escribiremos `Python`, en `Valor de la variable` pondremos la ruta en donde se instaló Python y hacemos click en `Aceptar`
+2.  Busca la variable `PATH`, seleccionala y hacemos click en `Editar`.
 
-3. Ejecutar Python desde el menú inicio de nuestro sistema operativo.
+3. En el campo `Valor de la variable` al final agregaremos punto y coma ( ; ) y a continuación pondremos la ruta de la carpeta bin de Python, en donde se instaló, y hacemos click en `Aceptar`.
+
+4. Ejecutar Python desde el menú inicio de nuestro sistema operativo.
 
 
 >Ten en cuenta que puede variar el proceso de configuración dependiendo de la versión de Windows que tengas.
@@ -78,7 +80,6 @@ Al terminar con la instalación, debemos configurar las variables de entorno con
   5 + j
   ```
 
-
 Se puede comprobar el tipo de las variables con la función `type(nombre_variable)`.
 
 ```python
@@ -108,28 +109,25 @@ En Python:
 
 ```python
 def sumar(x, y):
-  return x + y
+    return x + y
 
 print(sumar(3, 2))
 ```
 
 Ejemplo de una función que puede devolver varios valores.
 
-> En C solo se puede devolver un solo valor.
-
-En Python, se declara la función multiplicacion y retorna dos valores. Estas multiplicaciones que regresa la funcion son asignadas a dos variables, donde en el caso de python no es necesario hacerlas independientemente, sino que se pueden definir separandolas por una coma.
+En Python, se declara la función multiplicacion y retorna dos valores. Estas multiplicaciones que regresa la función son asignadas a dos variables, donde en el caso de python no es necesario hacerlas independientemente, sino que se pueden definir separandolas por una coma.
 
 ```python
 def multiplicacion(x, y):
-  return x * 2, y * 2
-a, b = funcion(1, 2)
+    return x * 2, y * 2
+a, b = multiplicacion(1, 2)
 
 print (a, b)
 ```
 
-* \[ \] El paso es por valor, pero se pasa la dirección del objecto no como tal los valores, solo falta aclarar un poco este concepto. Te puedes basar en el siguiente [link](http://stackoverflow.com/questions/986006/how-do-i-pass-a-variable-by-reference)
-  En C los argumentos de una funcion se pasan por valor, pero también está el paso por referencia utilizando punteros.
-  En Python cuando se pasa un argumento a una función es por valor, sin embargo el parámetro que se pasa es la dirección del objeto.
+> En C solo se puede devolver un solo valor.
+
 
 ## Tipos de colecciones de datos
 
@@ -146,19 +144,12 @@ En las tuplas, los valores creados al inicio ya no se pueden modificar después 
 
 Los diccionarios son colecciones que relacionan una clave y un valor.
 
-* \[ \] Definir que es un diccionario, el texto me dice que es una lista de elementos solo se necesita especificar un poco más sino puede confundirse con una lista.
-
-* \[ \] Podemos agregar una pequeña descripción de por que en python es distinto que en C, es decir por que no tengo que usar indices. - \[ \] El punto anterior nos puede llevar a que es un iterador, recomiendo explicar brevemente con un ejemplo [con gatitos quedaria bien](http://nvie.com/img/iterable-vs-iterator.png)
-
-En Python:
 
 ```python
 lista_animales = ['gato', 'elefante', 'rinoceronte']
 for animal in lista_animales:
-  print ("El animal es:", animal, "la cantidad de letras:", len(animal))
+    print ("El animal es:", animal, "la cantidad de letras:", len(animal))
 ```
-
-* \[ \] Como funcionan los argumentos variables, esto argumentos funcionan como una lista.
 
 ```python
 def suma(*numeros):
