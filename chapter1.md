@@ -101,6 +101,29 @@ True
 False
 ```
 
+### Tipos de colecciones de datos
+
+#### Listas
+
+Es un tipo de estructura de datos, y es similar a lo que en otros lenguajes, conocemos como arrays, la diferencia radica en que las listas pueden aumentar o disminuir sus dimensiones al momento de ejecutar el script o programa.
+En las listas podemos ordenar cualquier tipo de dato: números, cadenas, booleanos, incluso listas, entre otros.
+
+#### Tuplas
+
+En las tuplas, los valores creados al inicio ya no se pueden modificar después y su tamaño es fijo. Una ventaja de las tuplas es que son más ligeras que las listas.
+
+#### Diccionarios
+
+Los diccionarios son colecciones que relacionan una clave y un valor.
+
+
+```python
+lista_animales = ['gato', 'elefante', 'rinoceronte']
+for animal in lista_animales:
+    print ("El animal es:", animal, "la cantidad de letras:", len(animal))
+```
+
+
 ## Funciones
 
 En el lenguaje de programación de Python, se declara una función con la palabra `def`, el nombre de la función y retorna el valor resultante de la operación usando `return`, si no hay un valor de retorno se regresará `None`.
@@ -127,30 +150,6 @@ print (a, b)
 ```
 
 > En C solo se puede devolver un solo valor.
-
-
-## Tipos de colecciones de datos
-
-### Listas
-
-Es un tipo de estructura de datos, y es similar a lo que en otros lenguajes, conocemos como arrays, la diferencia radica en que las listas pueden aumentar o disminuir sus dimensiones al momento de ejecutar el script o programa.
-En las listas podemos ordenar cualquier tipo de dato: números, cadenas, booleanos, incluso listas, entre otros.
-
-### Tuplas
-
-En las tuplas, los valores creados al inicio ya no se pueden modificar después y su tamaño es fijo. Una ventaja de las tuplas es que son más ligeras que las listas.
-
-### Diccionarios
-
-Los diccionarios son colecciones que relacionan una clave y un valor.
-
-
-```python
-lista_animales = ['gato', 'elefante', 'rinoceronte']
-for animal in lista_animales:
-    print ("El animal es:", animal, "la cantidad de letras:", len(animal))
-```
-
 
 
 ### Argumentos variables
